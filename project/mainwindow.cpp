@@ -2,22 +2,17 @@
 #include "ui_mainwindow.h"
 #include <QMessageBox>
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+    : QMainWindow(parent),
+    ui(new Ui::MainWindow)
 {
-    ui->setupUi(this);
-    DBConnection= QSqlDatabase::addDatabase("QSQLITE");
-    DBConnection.setDatabaseName(QCoreApplication::applicationDirPath()+"/database.db");
-    if(DBConnection.open())
-    {
-        qDebug()<<"Database is connected";
-    }
-    else
-    {
-        qDebug()<<"Database is not connected";
-    }
+   ui->setupUi(this);
+   mydb=QSqlDatabase::addDatabase("QSQLITE");
+   mydb.setDatabaseName("C:/Users/diksh/ArthaBhaag/database.db");
+   if(!mydb.open())
+       ui->label->setText("failed to open");
+   else
+       ui->label->setText("Welcome");
 }
-
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -28,41 +23,32 @@ void MainWindow::on_pushbutton_login_clicked()
 {
     QString username= ui-> lineEdit->text();
     QString password= ui-> lineEdit_2->text();
-    if(username =="test" && password=="test")
+    if(!mydb.isOpen())
     {
+        qDebug()<<"failed to oppen database";
+        return;
 
-        hide();
-        secdialog = new secDialog(this);
-        secdialog ->show();
     }
-    else
+    QSqlQuery qry;
+    if(qry.exec("select * from login where username='"+ username +"' and password='"+ password +"'"))
     {
-        QSqlQuery QueryGetUser(DBConnection);
-        QueryGetUser.prepare("SELECT * FROM login WHERE username="+username+"AND userpassword="+password);
-        if(QueryGetUser.exec())
+        int count;
+        while(qry.next())
         {
-            int userfindcount = 0;
-            while(QueryGetUser.next())
-            {
-                userfindcount = userfindcount + 1;
-            }
-            if(userfindcount ==1)
-            {
-                QMessageBox::information(this, "login","username and password is not correct");
-            }
-            else if(userfindcount==0);
-            {
-                this->hide();
-                secdialog = new secDialog(this);
-                secdialog ->show();
-            }
+            count++;
         }
-        else
+        if(count==1)
         {
-            QMessageBox::warning(this, "login","username and password is not correct");
+            hide();
+            secdialog = new secDialog(this);
+            secdialog ->show();
         }
-    }
+        if(count<1)
+        {
+             QMessageBox::warning(this, "login","username and password is not correct");
+        }
 
+    }
 
 }
 void MainWindow::on_pushbutton_reg_clicked()

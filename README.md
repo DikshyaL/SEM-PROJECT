@@ -29,7 +29,7 @@ Easily organize and manage expenses for different activities or trips by creatin
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/DikshyaL/SEM-PROJECT
+   git clone https://github.com/DikshyaL/ArthaBhaag
 
 ## Technologies Used
 
@@ -40,4 +40,3 @@ Easily organize and manage expenses for different activities or trips by creatin
 ### Backend
 
 - C++
-

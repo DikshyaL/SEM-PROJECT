@@ -3,6 +3,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include<QtSql>
+#include<QtDebug>
+#include<QFileInfo>
 #include"secdialog.h"
 #include"profiledialog.h"
 #include"calcdialog.h"
@@ -10,7 +13,6 @@
 #include"piedialog.h"
 #include"secdialog.h"
 #include"regdialog.h"
-#include"QtSql/QtSql"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -29,10 +31,11 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QSqlDatabase mydb;
     secDialog *secdialog;
     regDialog *regdialog;
     MainWindow *mainwindow;
-    QSqlDatabase DBConnection;
+;
 
 };
 #endif // MAINWINDOW_H

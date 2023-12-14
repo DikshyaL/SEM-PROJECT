@@ -3,6 +3,9 @@
 #define REGDIALOG_H
 #include <QDialog>
 #include<QObject>
+#include<QtSql>
+#include<QtDebug>
+#include<QFileInfo>
 class MainWindow;
 namespace Ui {
 class regDialog;
@@ -21,6 +24,7 @@ private slots:
 private:
     Ui::regDialog *ui;
     MainWindow *mainwindow;
+    QSqlDatabase mydb;
 };
 
 

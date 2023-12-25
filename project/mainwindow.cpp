@@ -1,17 +1,29 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include"listdialog.h"
+#include"regdialog.h"
+#include"secdialog.h"
 #include <QMessageBox>
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(QWidget *parent,const QString &username)
     : QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    secdialog(nullptr),
+    regdialog(nullptr),
+    listdialog(nullptr),
+    username(username)
 {
    ui->setupUi(this);
-   mydb=QSqlDatabase::addDatabase("QSQLITE");
+
+   mydb = QSqlDatabase::addDatabase("QSQLITE");
    mydb.setDatabaseName("C:/Users/diksh/ArthaBhaag/database.db");
-   if(!mydb.open())
-       ui->label->setText("failed to open");
-   else
-       ui->label->setText("Welcome");
+
+   if (!mydb.open()) {
+       qDebug() << "Failed to open the database:" << mydb.lastError().text();
+       ui->label->setText("Failed to open the database");
+
+   } else {
+       ui->label->setText("Welcome to ARTHABHAAG");
+   }
 }
 MainWindow::~MainWindow()
 {
@@ -32,7 +44,7 @@ void MainWindow::on_pushbutton_login_clicked()
     QSqlQuery qry;
     if(qry.exec("select * from login where username='"+ username +"' and password='"+ password +"'"))
     {
-        int count;
+        int count = 0;
         while(qry.next())
         {
             count++;
@@ -40,7 +52,9 @@ void MainWindow::on_pushbutton_login_clicked()
         if(count==1)
         {
             hide();
-            secdialog = new secDialog(this);
+            qDebug() << "Username extracted from the database: " << username;
+            listdialog = new listDialog(this, username);
+            secdialog = new secDialog(this,username);
             secdialog ->show();
         }
         if(count<1)

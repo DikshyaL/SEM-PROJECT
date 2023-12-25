@@ -6,13 +6,9 @@
 #include<QtSql>
 #include<QtDebug>
 #include<QFileInfo>
-#include"secdialog.h"
-#include"profiledialog.h"
-#include"calcdialog.h"
-#include"listdialog.h"
-#include"piedialog.h"
-#include"secdialog.h"
-#include"regdialog.h"
+class secDialog;
+class listDialog;
+class regDialog;
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -22,7 +18,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(QWidget *parent = nullptr,const QString &username = "");
     ~MainWindow();
 
 private slots:
@@ -34,8 +30,10 @@ private:
     QSqlDatabase mydb;
     secDialog *secdialog;
     regDialog *regdialog;
+    listDialog *listdialog;
     MainWindow *mainwindow;
+    QString username;
 ;
 
 };
-#endif // MAINWINDOW_H
+#endif

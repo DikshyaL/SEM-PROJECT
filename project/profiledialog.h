@@ -1,11 +1,16 @@
 #pragma once
 #ifndef PROFILEDIALOG_H
 #define PROFILEDIALOG_H
-#include"calcdialog.h"
-#include"piedialog.h"
+#include<QtSql>
+#include<QtDebug>
+#include<QFileInfo>
 class secDialog;
+class calcDialog;
 class listDialog;
+class pieDialog;
+class regDialog;
 #include <QDialog>
+
 
 namespace Ui {
 class profileDialog;
@@ -16,7 +21,7 @@ class profileDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit profileDialog(QWidget *parent = nullptr);
+    explicit profileDialog(QWidget *parent = nullptr,const QString &username = "");
     ~profileDialog();
 private slots:
     void on_pushbutton_list_clicked();
@@ -30,6 +35,8 @@ private:
     pieDialog *piedialog;
     calcDialog *calcdialog;
     secDialog *secdialog;
+    QSqlDatabase mydb;
+    QString username;
 };
 
 #endif // PROFILEDIALOG_H

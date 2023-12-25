@@ -9,32 +9,41 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    adddialog.cpp \
     calcdialog.cpp \
+    groupdialog.cpp \
     listdialog.cpp \
     main.cpp \
     mainwindow.cpp \
     piedialog.cpp \
     profiledialog.cpp \
     regdialog.cpp \
-    secdialog.cpp
+    secdialog.cpp \
+    transdialog.cpp
 
 HEADERS += \
+    adddialog.h \
     calcdialog.h \
+    groupdialog.h \
     listdialog.h \
     mainwindow.h \
     piedialog.h \
     profiledialog.h \
     regdialog.h \
-    secdialog.h
+    secdialog.h \
+    transdialog.h
 
 FORMS += \
+    adddialog.ui \
     calcdialog.ui \
+    groupdialog.ui \
     listdialog.ui \
     mainwindow.ui \
     piedialog.ui \
     profiledialog.ui \
     regdialog.ui \
-    secdialog.ui
+    secdialog.ui \
+    transdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

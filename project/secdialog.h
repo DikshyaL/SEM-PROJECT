@@ -6,6 +6,10 @@
 #include"listdialog.h"
 #include"piedialog.h"
 #include"calcdialog.h"
+#include"groupdialog.h"
+#include<QtSql>
+#include<QtDebug>
+#include<QFileInfo>
 
 namespace Ui {
 class secDialog;
@@ -16,7 +20,7 @@ class secDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit secDialog(QWidget *parent = nullptr);
+    explicit secDialog(QWidget *parent = nullptr,const QString &username  = "");
     ~secDialog();
 private slots:
     void on_pushbutton_profile_clicked();
@@ -24,6 +28,8 @@ private slots:
     void on_pushbutton_calc_clicked();
     void on_pushbutton_list_clicked();
     void on_pushbutton_home_clicked();
+    void on_pushbutton_group_clicked();
+
 
 private:
     Ui::secDialog *ui;
@@ -32,7 +38,9 @@ private:
     pieDialog *piedialog;
     calcDialog *calcdialog;
     secDialog *secdialog;
-
+    groupDialog *groupdialog;
+    QSqlDatabase mydb;
+    QString username;
 };
 
 #endif // SECDIALOG_H

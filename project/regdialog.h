@@ -7,6 +7,7 @@
 #include<QtDebug>
 #include<QFileInfo>
 class MainWindow;
+class listDialog;
 namespace Ui {
 class regDialog;
 }
@@ -24,7 +25,10 @@ private slots:
 private:
     Ui::regDialog *ui;
     MainWindow *mainwindow;
+    listDialog *listdialog;
     QSqlDatabase mydb;
+    QString username;
+
 };
 
 

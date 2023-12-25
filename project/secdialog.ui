@@ -238,6 +238,39 @@ image:url(:/res/Screenshot 2023-11-02 100223.png);</string>
                <string>ARTHABHAAG</string>
               </property>
              </widget>
+             <widget class="QPushButton" name="pushbutton_group">
+              <property name="geometry">
+               <rect>
+                <x>210</x>
+                <y>300</y>
+                <width>31</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color:rgb(255, 255, 255);
+border-radius:12px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+             <widget class="QLabel" name="label_3">
+              <property name="geometry">
+               <rect>
+                <x>20</x>
+                <y>300</y>
+                <width>181</width>
+                <height>21</height>
+               </rect>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font: 11pt &quot;Segoe UI&quot;;</string>
+              </property>
+              <property name="text">
+               <string>To create group click here</string>
+              </property>
+             </widget>
             </widget>
            </item>
           </layout>

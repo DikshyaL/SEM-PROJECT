@@ -230,7 +230,7 @@ color:rgb(0,0,0);</string>
          <enum>QFrame::Raised</enum>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="pushbutton_food">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -241,6 +241,19 @@ color:rgb(0,0,0);</string>
         </property>
         <property name="text">
          <string>FOOD</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>100</y>
+          <width>49</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>value</string>
         </property>
        </widget>
       </widget>
@@ -283,7 +296,7 @@ border:0px;</string>
          <enum>QFrame::Raised</enum>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_4">
+       <widget class="QPushButton" name="pushbutton_laundry">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -294,6 +307,19 @@ border:0px;</string>
         </property>
         <property name="text">
          <string>LAUNDRY</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>100</y>
+          <width>49</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>value</string>
         </property>
        </widget>
       </widget>
@@ -316,19 +342,6 @@ background-color:rgb(255,255,255);</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>ENTERTAINMENT</string>
-        </property>
-       </widget>
        <widget class="QFrame" name="frame_6">
         <property name="geometry">
          <rect>
@@ -346,6 +359,32 @@ background-color:rgb(255,255,255);</string>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_6">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>100</y>
+          <width>49</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>value</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushbutton_enter">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>101</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>ENTERTAINMENT</string>
         </property>
        </widget>
       </widget>
@@ -368,19 +407,6 @@ background-color:rgb(255,255,255);</string>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
-       <widget class="QLabel" name="label_4">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>10</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>MISCELLANEOUS</string>
-        </property>
-       </widget>
        <widget class="QFrame" name="frame_8">
         <property name="geometry">
          <rect>
@@ -398,6 +424,32 @@ background-color:rgb(255,255,255);</string>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>100</y>
+          <width>49</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>value</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushbutton_mis">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>10</y>
+          <width>101</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>MISCELLANEOUS</string>
         </property>
        </widget>
       </widget>

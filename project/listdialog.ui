@@ -104,23 +104,6 @@ image: url(:/res/Screenshot 2023-11-02 094359.png);</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushbutton_pie">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border:0px;
-image:url(:/res/Screenshot 2023-11-02 094342.png);</string>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="pushbutton_profile">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -243,7 +226,7 @@ color:rgb(0,0,0);</string>
          <string>FOOD</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="label_food">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -309,7 +292,7 @@ border:0px;</string>
          <string>LAUNDRY</string>
         </property>
        </widget>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="label_laundry">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -361,7 +344,7 @@ background-color:rgb(255,255,255);</string>
          <enum>QFrame::Raised</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label_6">
+       <widget class="QLabel" name="label_entertainment">
         <property name="geometry">
          <rect>
           <x>30</x>
@@ -426,7 +409,7 @@ background-color:rgb(255,255,255);</string>
          <enum>QFrame::Raised</enum>
         </property>
        </widget>
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="label_miscellaneous">
         <property name="geometry">
          <rect>
           <x>20</x>
@@ -452,6 +435,40 @@ background-color:rgb(255,255,255);</string>
          <string>MISCELLANEOUS</string>
         </property>
        </widget>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>350</y>
+         <width>51</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Total</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_total">
+       <property name="geometry">
+        <rect>
+         <x>530</x>
+         <y>355</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
       </widget>
      </widget>
      <widget class="QWidget" name="page_2"/>

@@ -29,6 +29,7 @@ private:
     QSqlDatabase mydb;
     QString username;
 
+
 };
 
 

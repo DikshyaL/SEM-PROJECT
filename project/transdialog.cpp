@@ -4,10 +4,11 @@
 #include "ui_transdialog.h"
 #include "calcdialog.h"
 
-transDialog::transDialog(QWidget *parent, const QString &username) :
+transDialog::transDialog(QWidget *parent, const QString &username, const QString &groupname) :
     QDialog(parent),
     ui(new Ui::transDialog),
     calcdialog(nullptr),
+    groupname(groupname),
     username(username)
 {
     ui->setupUi(this);
@@ -163,6 +164,6 @@ void transDialog::on_pushbutton_done_clicked()
     } else {
         qDebug() << "Second row updated with differences!";
     }
-
+    calcdialog= new calcDialog(this, username, groupName);
     hide();
 }

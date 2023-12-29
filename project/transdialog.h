@@ -15,7 +15,7 @@ class transDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit transDialog(QWidget *parent = nullptr, const QString &username = "");
+    explicit transDialog(QWidget *parent = nullptr, const QString &username = "", const QString &groupname = "");
     ~transDialog();
 private slots:
     void on_pushbutton_done_clicked();
@@ -51,6 +51,7 @@ private:
     Ui::transDialog *ui;
     calcDialog *calcdialog;
     QSqlDatabase mydb;
+    QString groupname;
     QString username;
 };
 

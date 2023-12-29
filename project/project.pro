@@ -15,7 +15,6 @@ SOURCES += \
     listdialog.cpp \
     main.cpp \
     mainwindow.cpp \
-    piedialog.cpp \
     profiledialog.cpp \
     regdialog.cpp \
     secdialog.cpp \
@@ -27,7 +26,6 @@ HEADERS += \
     groupdialog.h \
     listdialog.h \
     mainwindow.h \
-    piedialog.h \
     profiledialog.h \
     regdialog.h \
     secdialog.h \
@@ -39,7 +37,6 @@ FORMS += \
     groupdialog.ui \
     listdialog.ui \
     mainwindow.ui \
-    piedialog.ui \
     profiledialog.ui \
     regdialog.ui \
     secdialog.ui \

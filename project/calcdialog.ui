@@ -133,23 +133,6 @@ image:url(:/res/Screenshot 2023-11-02 094359.png)</string>
      </widget>
     </item>
     <item>
-     <widget class="QPushButton" name="pushbuuton_pie">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border:0px;
-image:url(:/res/Screenshot 2023-11-02 094342.png)</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-    </item>
-    <item>
      <widget class="QPushButton" name="pushbutton_profile">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -205,8 +188,8 @@ image:url(:/res/Screenshot 2023-11-02 100223.png);</string>
   <widget class="QFrame" name="frame_2">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>0</y>
+     <x>40</x>
+     <y>10</y>
      <width>621</width>
      <height>191</height>
     </rect>
@@ -293,24 +276,11 @@ color:rgb(255,255,255);</string>
      <string>GROUP:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>60</y>
-      <width>91</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TRANSACTION</string>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>80</y>
+      <y>60</y>
       <width>71</width>
       <height>21</height>
      </rect>
@@ -323,7 +293,7 @@ color:rgb(255,255,255);</string>
     <property name="geometry">
      <rect>
       <x>320</x>
-      <y>100</y>
+      <y>90</y>
       <width>91</width>
       <height>21</height>
      </rect>
@@ -351,78 +321,75 @@ BORDER-RADIUS:10PX;</string>
      <string>ADD TRANSACTION</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QFrame" name="frame_4">
-   <property name="geometry">
-    <rect>
-     <x>89</x>
-     <y>209</y>
-     <width>531</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(34, 17, 91);
-background-color: rgb(255, 255, 255);
-BORDER-RADIUS:20PX;</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="label_members">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>20</y>
-      <width>281</width>
+      <x>400</x>
+      <y>60</y>
+      <width>49</width>
       <height>16</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;</string>
-    </property>
     <property name="text">
-     <string>XXXX PAID XXXX IN XXXX</string>
+     <string>0</string>
     </property>
    </widget>
-  </widget>
-  <widget class="QFrame" name="frame_5">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>270</y>
-     <width>531</width>
-     <height>51</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(34, 17, 91);
-background-color: rgb(255, 255, 255);
-BORDER-RADIUS:20PX;</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="label_total">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>20</y>
-      <width>281</width>
+      <x>400</x>
+      <y>90</y>
+      <width>49</width>
       <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_groupname">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>30</y>
+      <width>113</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushbutton_g">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>30</y>
+      <width>21</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(33, 12, 95);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_g">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>30</y>
+      <width>71</width>
+      <height>20</height>
      </rect>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;</string>
     </property>
     <property name="text">
-     <string>XXXX PAID XXXX IN XXXX</string>
+     <string/>
     </property>
    </widget>
   </widget>

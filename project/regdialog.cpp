@@ -46,14 +46,15 @@ void regDialog::on_pushbutton_reg_clicked()
                                                                                  "food INTEGER DEFAULT 0, "
                                                                                  "laundry INTEGER DEFAULT 0, "
                                                                                  "entertainment INTEGER DEFAULT 0,"
-                                                                                 "miscellaneous INTEGER DEFAULT 0)";
+                                                                                 "miscellaneous INTEGER DEFAULT 0,"
+                                                                                 "total INTEGER DEFAULT 0)";
 
                 if (query.exec(queryString)) {
                     qDebug() << "Table created successfully for user: " << username;
 
                     // Insert an initial row with zero values
-                    QString insertRowQuery = "INSERT INTO " + username + " (food, laundry, entertainment, miscellaneous) "
-                                                                         "VALUES (0, 0, 0, 0)";
+                    QString insertRowQuery = "INSERT INTO " + username + " (food, laundry, entertainment, miscellaneous,total) "
+                                                                         "VALUES (0, 0, 0, 0, 0)";
 
                     if (query.exec(insertRowQuery)) {
                         qDebug() << "Initial row added successfully for user: " << username;

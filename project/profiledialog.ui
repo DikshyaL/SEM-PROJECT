@@ -104,7 +104,7 @@ image: url(:/res/Screenshot 2023-11-02 094359.png);</string>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushbutton_pie">
+      <widget class="QPushButton" name="pushButton">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>0</horstretch>
@@ -112,8 +112,7 @@ image: url(:/res/Screenshot 2023-11-02 094359.png);</string>
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true">border:0px;
-image: url(:/res/Screenshot 2023-11-02 094342.png);</string>
+        <string notr="true">border:0;</string>
        </property>
        <property name="text">
         <string/>
@@ -215,40 +214,6 @@ border-radius:35px;</string>
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_2">
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_3">
-                <item>
-                 <widget class="QFrame" name="frame_2">
-                  <property name="styleSheet">
-                   <string notr="true">image: url(:/res/Screenshot 2023-11-01 115602.png);
-border:0px;</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_9">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;</string>
-                  </property>
-                  <property name="text">
-                   <string>Groups</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
                <layout class="QHBoxLayout" name="horizontalLayout_4">
                 <item>
                  <widget class="QFrame" name="frame_3">
@@ -264,7 +229,7 @@ border:0px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pushButton_10">
+                 <widget class="QPushButton" name="pushbutton_expenses">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                     <horstretch>0</horstretch>
@@ -276,39 +241,6 @@ border:0px;</string>
                   </property>
                   <property name="text">
                    <string>Expenses</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_5">
-                <item>
-                 <widget class="QFrame" name="frame_4">
-                  <property name="styleSheet">
-                   <string notr="true">image: url(:/res/Screenshot 2023-11-01 115743.png);</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pushButton_11">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;</string>
-                  </property>
-                  <property name="text">
-                   <string>Categories</string>
                   </property>
                  </widget>
                 </item>
@@ -431,26 +363,9 @@ image:url(:/res/Screenshot 2023-11-02 100223.png);</string>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_8">
             <item>
-             <widget class="QLabel" name="label_3">
-              <property name="styleSheet">
-               <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;</string>
-              </property>
-              <property name="text">
-               <string>FULLNAME</string>
-              </property>
-             </widget>
-            </item>
-            <item>
              <widget class="QLabel" name="label_4">
               <property name="text">
                <string>USERNAME</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label_5">
-              <property name="text">
-               <string>Joined on:</string>
               </property>
              </widget>
             </item>

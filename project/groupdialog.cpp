@@ -1,14 +1,19 @@
 // groupdialog.cpp
-
+#include"secdialog.h"
+#include"calcdialog.h"
 #include "groupdialog.h"
 #include "ui_groupdialog.h"
 #include "QSqlError"
 #include <QInputDialog>
 #include <QSqlQuery>
+#include <QMessageBox>
 
-groupDialog::groupDialog(QWidget *parent, const QString &username) :
+QSqlDatabase groupDialog::mydb = QSqlDatabase::addDatabase("QSQLITE");
+
+groupDialog::groupDialog(QWidget *parent, const QString &username, const QString &groupname) :
     QDialog(parent),
     ui(new Ui::groupDialog),
+    groupname(groupname),
     username(username)
 {
     ui->setupUi(this);
@@ -21,6 +26,8 @@ groupDialog::groupDialog(QWidget *parent, const QString &username) :
     }
 }
 
+
+
 groupDialog::~groupDialog()
 {
     delete ui;
@@ -28,7 +35,8 @@ groupDialog::~groupDialog()
 
 void groupDialog::on_pushbutton_done_clicked()
 {
-    QString groupName = ui->lineEdit_groupname->text();
+
+    QString groupname = ui->lineEdit_groupname->text();
     int numMembers = ui->spinBox_numberofmembers->value();
 
     if (numMembers <= 0) {
@@ -43,7 +51,7 @@ void groupDialog::on_pushbutton_done_clicked()
 
     QSqlQuery query;
 
-    // Create user_groups table if not exists
+
     QString createTableUserGroupsQuery = "CREATE TABLE IF NOT EXISTS user_groups ("
                                          "id INTEGER PRIMARY KEY AUTOINCREMENT, "
                                          "group_name TEXT)";
@@ -53,15 +61,15 @@ void groupDialog::on_pushbutton_done_clicked()
     }
 
     // Create dynamic table for the new group
-    QString tableName = QString("%1_groups_%2").arg(username).arg(groupName);
+    QString tableName = QString("%1_groups_%2").arg(username).arg(groupname);
     QString createTableQuery = QString("CREATE TABLE IF NOT EXISTS %1 ("
                                        "id INTEGER PRIMARY KEY AUTOINCREMENT, ").arg(tableName);
     for (int i = 1; i <= numMembers; ++i) {
-        createTableQuery += QString("member%1 INTEGER DEFAULT 0, ").arg(i);
+        createTableQuery += QString("member%1 NUMERIC DEFAULT 0.0, ").arg(i);
     }
 
-    createTableQuery += "total INTEGER DEFAULT 0, ";
-    createTableQuery += "mean REAL DEFAULT 0)";
+    createTableQuery += "total NUMERIC DEFAULT 0.0, ";
+    createTableQuery += "mean NUMERIC DEFAULT 0.0)";
 
     if (!query.exec(createTableQuery)) {
         qDebug() << "Error creating table:" << query.lastError().text();
@@ -103,7 +111,9 @@ void groupDialog::on_pushbutton_done_clicked()
     }
 
     qDebug() << "Group information added to the database:";
-    qDebug() << "Group Name: " << groupName;
+    qDebug() << "Group Name: " << groupname;
 
     hide();
+    secdialog =new secDialog(this, username, groupname);
+    calcdialog = new calcDialog(this, username, groupname);
 }

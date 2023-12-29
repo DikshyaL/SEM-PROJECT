@@ -2,14 +2,16 @@
 #include "adddialog.h"
 #include "ui_adddialog.h"
 #include "listdialog.h"
+#include "calcdialog.h"
 #include <QSqlQuery>
 #include <QDebug>
 
-addDialog::addDialog(QWidget *parent, listDialog *listDialogParent, const QString &username) :
+addDialog::addDialog(QWidget *parent, listDialog *listDialogParent, const QString &username, const QString &groupname) :
     QDialog(parent),
     ui(new Ui::addDialog),
     listdialog(listDialogParent),
     username(username),
+    groupname(groupname),
     transactionActive(false)
 {
     ui->setupUi(this);
@@ -78,4 +80,6 @@ void addDialog::on_pushbutton_done_clicked()
     }
 
     hide();
+    listdialog= new listDialog(this, username, groupname);
+    calcdialog= new calcDialog(this, username, groupname);
 }

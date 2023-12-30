@@ -30,6 +30,8 @@ private slots:
     void on_pushbutton_trans_clicked();
     void on_pushbutton_list_clicked();
     void on_pushbutton_g_clicked();
+    void on_spinBox_member_valueChanged(int value);
+
 
 private:
     Ui::calcDialog *ui;

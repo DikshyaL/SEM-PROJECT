@@ -24,6 +24,7 @@ calcDialog::calcDialog(QWidget *parent, const QString &username, const QString &
 
     // Fetch and display user information from the database
     displayUserInfo();
+    connect(ui->spinBox_member, SIGNAL(valueChanged(int)), this, SLOT(on_spinBox_member_valueChanged(int)));
 }
 
 calcDialog::~calcDialog()
@@ -62,7 +63,9 @@ void calcDialog::displayUserInfo()
 {
     QSqlQuery query(mydb);
     QString tableName = QString("%1_groups_%2").arg(username, groupname);
-    QString selectUserInfoQuery = QString("SELECT total FROM %1").arg(tableName);
+    QString selectUserInfoQuery = QString("SELECT total,mean FROM %1").arg(tableName);
+
+
 
     qDebug() << "Final SQL Query:" << selectUserInfoQuery;
 
@@ -70,6 +73,14 @@ void calcDialog::displayUserInfo()
         if (query.next()) {
             QSqlRecord record = query.record();
             int totalIndex = record.indexOf("total");
+            int meanIndex = record.indexOf("mean");
+            if (meanIndex != -1) {
+            double mean = query.value(meanIndex).toDouble();
+            ui->label_mean->setText(QString::number(mean));
+            }
+            else {
+            qDebug() << "Error: 'mean' column not found in the table.";
+            }
 
             if (totalIndex != -1) {
                 double total = query.value(totalIndex).toDouble();
@@ -139,4 +150,32 @@ void calcDialog::on_pushbutton_g_clicked()
         qDebug() << "Error: Groupname is empty.";
     }
 }
+void calcDialog::on_spinBox_member_valueChanged(int value)
+{
+    int totalMembers = getNumberOfMembers(username, groupname);
 
+    if (value > totalMembers) {
+
+        QMessageBox::warning(this, "Invalid Member Number", "Entered member number exceeds the total number of members in the group.");
+        ui->label_pay->clear();
+    } else {
+
+        QString tableName = QString("%1_groups_%2").arg(username, groupname);
+        QString columnName = QString("member%1").arg(value);
+        QString selectAmountQuery = QString("SELECT %1 FROM %2 LIMIT 1 OFFSET 1").arg(columnName,tableName);
+
+        QSqlQuery query(mydb);
+        if (query.exec(selectAmountQuery))
+        {
+            if( query.next()) {
+            double amount = query.value(0).toDouble();
+            ui->label_pay->setText(QString("%1").arg(amount));
+        } else {
+            qDebug() << "Error fetching amount information:" << query.lastError().text();
+        }
+        }
+        else {
+        qDebug() << "Error fetching amount information:" << query.lastError().text();
+        }
+}
+}

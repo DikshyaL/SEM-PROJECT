@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>Screenshot 2023-12-29 215451.png</file>
+        <file>Screenshot 2023-12-29 215519.png</file>
+        <file>Screenshot 2023-12-29 215541.png</file>
+        <file>Screenshot 2023-12-29 215815.png</file>
+        <file>Screenshot 2023-12-29 215945.png</file>
+    </qresource>
+</RCC>

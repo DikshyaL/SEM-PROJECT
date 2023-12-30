@@ -48,6 +48,9 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    ../../OneDrive/Pictures/Screenshots/HYAAAAAA.qrc \
+    ../../OneDrive/Pictures/Screenshots/lolo.qrc \
+    ../../OneDrive/Pictures/Screenshots/sth.qrc \
     ../../Pictures/Screenshots/bus.qrc \
     ../../Pictures/Screenshots/calc.qrc \
     ../../Pictures/Screenshots/dash.qrc \
@@ -68,4 +71,6 @@ RESOURCES += \
     ../../Pictures/Screenshots/prooo.qrc \
     ../../Pictures/Screenshots/qttt.qrc \
     ../../Pictures/Screenshots/ramen.qrc \
-    ../../Pictures/Screenshots/things.qrc
+    ../../Pictures/Screenshots/things.qrc \
+    LOGOOOO.qrc \
+    sth.qrc

@@ -17,8 +17,8 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:rgb(32, 18, 85);
-color:rgb(77, 91, 90);</string>
+   <string notr="true">background-color:rgb(164,166,255);
+color:rgb(0,0,0)</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -65,7 +65,7 @@ color:rgb(77, 91, 90);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:0px;
-image:url(:/res/Screenshot 2023-11-02 094331.png)</string>
+image:url(:/res/Screenshot 2023-12-29 215945.png)</string>
        </property>
        <property name="text">
         <string/>
@@ -81,7 +81,7 @@ image:url(:/res/Screenshot 2023-11-02 094331.png)</string>
         </sizepolicy>
        </property>
        <property name="styleSheet">
-        <string notr="true">image:url(:/res/Screenshot 2023-11-02 094410.png);
+        <string notr="true">image:url(:/res/Screenshot 2023-12-29 215519.png);
 border: 0px;</string>
        </property>
        <property name="text">
@@ -99,7 +99,7 @@ border: 0px;</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:0px;
-image: url(:/res/Screenshot 2023-11-02 094359.png);</string>
+image: url(:/res/Screenshot 2023-12-29 215451.png)</string>
        </property>
        <property name="text">
         <string/>
@@ -116,7 +116,7 @@ image: url(:/res/Screenshot 2023-11-02 094359.png);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:0px;
-image:url(:/res/Screenshot 2023-11-02 100223.png);</string>
+image:url(:/res/Screenshot 2023-12-29 215541.png)</string>
        </property>
        <property name="text">
         <string/>
@@ -159,6 +159,10 @@ image:url(:/res/Screenshot 2023-11-02 100223.png);</string>
    </item>
    <item>
     <widget class="QStackedWidget" name="stackedWidget">
+     <property name="styleSheet">
+      <string notr="true">background-color:rgb(164,166,255);
+color:rgb(0,0,0)</string>
+     </property>
      <widget class="QWidget" name="page_7">
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>

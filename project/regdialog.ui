@@ -14,7 +14,8 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(38, 3, 80);</string>
+   <string notr="true">background-color: rgb(164,166,255);
+color:rgb(0,0,0);</string>
   </property>
   <widget class="QFrame" name="frame">
    <property name="geometry">
@@ -65,9 +66,9 @@ color: rgb(46, 11, 97);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
+     <string notr="true">color: rgb(0,0,0);
 font: 700 11pt &quot;Segoe UI&quot;;
-background-color: rgb(35, 12, 86);
+background-color: rgb(164,166,255);
 border-radius:10px;</string>
     </property>
     <property name="text">

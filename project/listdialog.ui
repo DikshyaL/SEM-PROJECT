@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color:rgb(31, 12, 88)</string>
+   <string notr="true">background-color:rgb(164,166,255);</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
@@ -62,7 +62,7 @@
        </property>
        <property name="styleSheet">
         <string notr="true">border:0px;
-image: url(:/res/Screenshot 2023-11-02 094331.png);</string>
+image: url(:/res/Screenshot 2023-12-29 215945.png)</string>
        </property>
        <property name="text">
         <string/>
@@ -79,7 +79,7 @@ image: url(:/res/Screenshot 2023-11-02 094331.png);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:0px;
-image: url(:/res/Screenshot 2023-11-02 094410.png);</string>
+image: url(:/res/Screenshot 2023-12-29 215519.png)</string>
        </property>
        <property name="text">
         <string/>
@@ -96,7 +96,7 @@ image: url(:/res/Screenshot 2023-11-02 094410.png);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:0px;
-image: url(:/res/Screenshot 2023-11-02 094359.png);</string>
+image:url(:/res/Screenshot 2023-12-29 215451.png)</string>
        </property>
        <property name="text">
         <string/>
@@ -113,7 +113,7 @@ image: url(:/res/Screenshot 2023-11-02 094359.png);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">border:0px;
-image: url(:/res/Screenshot 2023-11-02 100223.png);</string>
+image: url(:/res/Screenshot 2023-12-29 215541.png)</string>
        </property>
        <property name="text">
         <string/>
@@ -158,7 +158,8 @@ image: url(:/res/Screenshot 2023-11-02 100223.png);</string>
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="styleSheet">
       <string notr="true">font: 10pt &quot;Segoe UI&quot;;
-color:rgb(0,0,0)</string>
+color:rgb(0,0,0);
+background-color:rgb(164,166,255);</string>
      </property>
      <widget class="QWidget" name="page">
       <widget class="QFrame" name="frame">
@@ -447,7 +448,7 @@ background-color:rgb(255,255,255);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(0,0,0);</string>
        </property>
        <property name="text">
         <string>Total</string>
